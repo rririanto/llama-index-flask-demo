@@ -16,14 +16,12 @@ def load_twitter_data(handles):
     # Replace 'YOUR_TOKEN' with your actual Twitter API bearer token
     loader = TwitterTweetReader(bearer_token="your key here")
     documents = loader.load_data(twitterhandles=handles)
-    index = GPTSimpleVectorIndex(documents)
-    return index
+    return GPTSimpleVectorIndex(documents)
 
 
 def load_folder():
     documents = SimpleDirectoryReader('data').load_data()
-    index = GPTSimpleVectorIndex(documents)
-    return index
+    return GPTSimpleVectorIndex(documents)
 
     
 
